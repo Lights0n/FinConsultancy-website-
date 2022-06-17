@@ -1,0 +1,1193 @@
+*,
+*::before,
+*::after {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+a{
+	text-decoration: none ;
+}
+ul, ol, li{
+	list-style: none;
+}
+img{
+	vertical-align: top;
+}
+h1, h2, h3, h4, h5, h6{
+	font-weight: inherit;
+	font-size: inherit;
+}
+html,
+body{
+	height: 100%;
+	line-height: 1;
+	font-size: 14px;
+	font-weight: 500;
+	color: #252B42;
+	font-family: Montserrat;
+	background-color: #FAFAFA;
+}
+.wrapper{
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+/*end of starting*/
+._container {
+	max-width: 1046px;
+	margin: 0px auto;
+	padding: 0 15px;
+	box-sizing: content-box;
+}
+._ibg{
+	position: relative;
+}
+._ibg img {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+	object-fit: cover;
+}
+/*==================================ШАПКА--*/
+.header {
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 0;
+	z-index: 50;
+}
+.header__container {
+	display: flex;
+	min-height: 104px;
+/*НУ чтобы не выше не ниже! Супер тема!*/
+	align-items: center;
+}
+@media (max-width: 479px){
+	.header__container {
+		min-height: 70px;	
+	}
+}
+.header__logo {
+	font-size: 24px;
+	font-weight: 700;
+	color: inherit;
+}
+.header__menu {
+	margin: 0 0 0 133px;
+							/*ОТСТУП БЕЗОПАСНОСТИ! 
+							чтобы при сужении пункты не липли к шапке! */
+	padding: 5px 0;
+}
+
+@media (max-width: 992px){
+	.header__menu {
+		margin: 0 0 0 88px;
+	}
+}
+							/*Меняем отступ при сужении*/
+@media (max-width: 767px){
+	.header__menu {
+		margin: 0 0 0 40px;
+	}
+}
+@media (max-width: 479px){
+	.header__menu {
+		margin: 0 0 0 20px;
+	}
+}
+.menu {}
+.menu__list {
+	display: flex;	
+							/*Пункты меню падают друг под друга при сужении окна*/
+	flex-wrap: wrap;
+}
+.menu__item {}
+.menu__item:hover{
+	text-decoration: underline;
+}
+/*=========================== MAAAAN HAVE A LOOK! ========================*/
+.menu__item:not(:last-child){
+	margin: 0px 21px 0px 0px;
+}
+.menu__link {
+	font-size: 14px;
+	color: #737373;
+	line-height:calc(24 / 14 * 100%);
+	font-weight: 600;
+}
+@media (max-width: 479px){
+	.menu__link {
+		font-size: 18px;
+	}
+}
+/*-------------------PAGE PAGE PAGE PAGE PAGE PAGE PAGE--------------------*/
+.page{
+	flex: 1 1 auto;
+}
+.page__services {
+				/*2 строки чтобы вывести на 1 план!*/
+	position: relative;
+	z-index: 2;
+	margin: -111px 0 0 0 ;
+	}
+.page__main-block {}
+.page__advantages {}
+					/*прибиваем подвал, ееее		во враппер +
+					display: flex;
+					flex-direction: column;  -----------*/
+.page__practice {}		
+.page__whoweare {}
+.page__clients {}
+.page__subscribe {}
+.page__getintouch {}
+.page__contact {}
+/*--------------------------------------------FOOTER-----------*/
+.footer{
+}
+/*================================HEADER like a,..... povtor=============*/
+.header-block {
+	letter-spacing: 0.2px;
+}
+@media (max-width: 992px){
+	.header-block {
+	padding: 0px 0px 10px 0px;
+	}
+}
+.header-block__title {
+	font-weight: 700;
+	color: #252B42;
+	font-size: 40px;
+	line-height: 57px;
+	text-align: center;
+	letter-spacing: 0.2px;
+}
+.header-block__title:not(:last-child){
+	padding-bottom: 10px;
+}
+@media (max-width: 992px){
+	.header-block__title{
+		font-size: 35px;
+	}
+}
+@media (max-width: 767){
+	.header-block__title{
+		font-size: 30px;
+	}
+}
+.header-block__sub-title {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 20px;
+	text-align: center;	
+}
+/*========================================MFIN-block==*/
+.main-block {
+	position: relative;
+}
+.main-block__container {}
+._container {}
+.main-block__body {
+	padding: 184px 0 191px 0;
+	position: relative;
+	z-index: 2;
+	max-width: 509px;
+}
+@media (max-width: 992px){
+	.main-block__body{
+		padding: 120px 0 191px 0;
+		position: relative;
+		z-index: 2;
+		max-width: 509px;
+	}
+}
+				/*При уменьшении окна уменьшаем
+				отступы от контентных частей------*/
+@media (max-width: 479px){
+	.main-block__body{
+		padding: 120px 0 160px 0;
+		}
+}
+				/*Все ТЕГИ 1-го уровня кроме последнего
+				в main-block__body! --------------*/
+.main-block__body > *:not(:last-child){
+	margin: 0 0 35px 0;
+}
+.main-block__title {
+	font-size: 58px;
+	line-height:calc(80 / 58 * 100%);
+	font-weight: 800;
+	letter-spacing: 0.2px;
+}
+@media (max-width: 479px){
+	.main-block__title{
+		font-size: 42px;
+	}	
+}
+.main-block__text {
+	color: #737373;
+	font-size: 20px;
+	line-height:calc(30 / 20 * 100%);
+	font-weight: 500;
+	max-width: 376px;
+}
+@media (max-width: 479px){
+	.main-block__text{
+		color: #585757;
+	}
+}
+.main-block__buttons {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -10px 0;
+}
+@media (max-width: 479px){
+	.main-block__button{
+		flex: 1 1 auto;
+	}
+}
+.main-block__button {
+	border-radius: 37px;
+	display: flex;
+	min-height: 48px;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 0.2px;
+	font-weight: 700;
+	text-align: center;
+	line-height:150%;
+	font-size: 14px;
+	padding: 5px 36px;
+	margin: 10px 0;	
+	transition: all 0.3s ease 0s;
+}
+@media (max-width: 479px){
+	.main-block__button{
+		flex: 1 1 100%;
+	}
+}
+@media (min-width: 479px){
+	.main-block__button:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+.main-block__button_orange{
+	background: #FF7B47;
+	color: #fff;
+}
+.main-block__button_orange:hover{
+	background: #fff;
+	color:#FF7B47 ;
+}
+.main-block__button_border {
+	border: 1px solid #0D5C63;
+	color: #0D5C63;	
+}
+.main-block__button_border:hover {
+	background-color:#0D5C63 ;
+	color:#fff ;	
+}
+.main-block__image{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	top: 0;
+}
+				/*Бро, прибиваем картинку 
+				правым краем к экрану при сужении!*/
+@media (max-width: 1300px){
+	.main-block__image img{
+		object-position: right;
+	}
+}
+@media (max-width: 992px){
+	.main-block__image img{
+		opacity: 0.6;
+	}
+}
+/*==========================================services=========================*/
+.services__container {
+}
+@media (min-width: 680px){
+	.services__body {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 0 -15px;
+}
+}
+.services__column {
+			/*маааааагия! ахах, ну, 3 колонки 
+			и отрицательные отступы зарешали----*/
+	flex: 0 1 33.333%;	
+}
+@media (min-width: 680px){
+	.services__column {
+	padding: 0 15px;
+	}
+}
+@media (max-width: 992px){
+	.services__column{
+		flex: 0 1 50%;
+	}
+	.services__column:not(:last-child) {
+		margin: 0 0 30px 0;
+	}
+	.services__column:last-child {
+		flex: 1 1 100%;
+		margin-bottom: 0px;
+	}
+}
+.services__item {
+	box-shadow: 0px 13px 19px rgba(0, 0, 0, 0.07);
+	background-color: #fff;
+	padding: 35px 40px;
+			/*Одна карточка длинее другоййй.
+			ИСПРАААААВИМ!-------*/
+	height: 100%;
+}
+@media (max-width: 479px){
+	.services__item{
+		padding: 15px 20px;
+	}
+}
+.item-services > *:not(:last-child){
+	padding: 0 0 10px 0;
+}
+
+				/* В js.script добавляем класс
+				item-services_green при наведении для эффектов */
+.item-services_green{
+	background-color: #0D5C63;
+}
+.item-services_green .item-service__title{
+	color: #fff;
+}
+.item-services_green .item-service__text{
+	color: #fff;
+}
+.item-service__icon {
+	color:#0D5C63;
+}
+.item-service__title {
+	font-size: 24px;
+	line-height: 133.33%;
+	font-weight: 700;
+	letter-spacing: 0.1px;
+}
+.item-service__text {
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 143%;
+	/* or 20px */
+	letter-spacing: 0.2px;
+	color: #737373;
+}
+/*=================================ADVANTAGES/STATISTICS====*/
+.advantages {
+	padding: 80px 0;
+}
+@media (max-width: 992px){
+	.advantages {
+		padding: 50px 0;
+	}
+}
+@media (max-width: 767px){
+	.advantages {
+		padding: 30px 0;
+	}	
+}
+.advantages__container {	
+}
+._container {}
+.advantages__header {
+	padding: 0 0 50px 0;
+} 
+@media (max-width: 767px){
+	.advantages__header {
+	margin: 0 0 25px 0;
+	} 	
+}	
+.advantages-body {
+	display: flex;
+			/*аДАПТИАВ СТРОКА АГА*/
+	flex-wrap: wrap;
+	margin: 0px -15px;
+}
+.advantages-column {
+	padding: 0 15px; 
+	flex: 0 1 25%;
+}
+@media (max-width: 1020px){
+	.advantages-column{
+		flex: 0 1 50%;
+	}
+}
+@media (max-width: 560px){
+	.advantages-column{
+		flex: 0 1 100%;
+	}
+}
+.advantages-column:not(:last-child){
+	padding-bottom: 30px;
+}
+.advantages__item {
+	padding: 30px 25px;
+	background-color: #fff;	
+	text-align: center;
+	font-weight: 700;
+}
+.advantages__item >*:not(:last-child){
+	padding-bottom: 10px;
+}
+			/*Делаем ровными по высоте иконки!*/
+.advantages__icon {
+	height: 48px;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+}
+.advantages__value {
+	font-size: 40px;
+	line-height: 142.5%;
+	letter-spacing: 0.2px;
+}
+.advantages__text {
+	font-size: 16px;
+	line-height: 150%;
+	letter-spacing: 0.1px;
+	color: #737373;
+}
+/*=====================PRACTICE ADVICE!====*/
+
+
+.practice {
+	padding: 80px 0 80px 0;
+}
+@media (max-width: 630px){
+	.practice {
+	padding: 0px 0 80px 0;
+	}
+}
+@media (max-width: 993px){
+	.practice {
+	padding: 20px 0 80px 0;
+	}
+}
+.practice__container {}
+.practice__header {
+	margin: 45px 0;
+}
+@media (max-width: 630px){
+	.practice__header {
+	margin: 0px 0 45px 0;
+	}
+}
+.practice__body {
+	display: flex;
+			/*аДАПТИАВ СТРОКА АГА*/
+	flex-wrap: wrap;
+	margin: 0px -20px -30px;
+}
+.practice__column {
+	padding: 0 20px;
+	flex: 0 1 25%;
+	margin: 0 0 30px 0;
+}
+@media (max-width: 1040px){
+	.practice__column {
+	flex: 0 1 50%;
+	}
+}
+@media (max-width: 630px){
+	.practice__column {
+	flex: 0 1 100%;
+	}
+}
+.practice__item {
+}
+.item-practice {
+	background-color: #fff;
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+.item-practice__content {
+	padding: 30px;
+	flex: 1 1 auto;
+}
+.item-practice__link {
+	letter-spacing: 0.1px;
+	font-size: 16px;
+	line-height: 150%;
+	color: inherit;
+	font-weight: 700;
+				/*Чтобы для блятской ссылки отступ работал.
+							Это ж ссылка сука*/
+	display: inline-block;
+}
+.item-practice__link:not(:last-child){
+	padding: 0 0 15px 0;
+}
+.item-practice__link:hover{
+	text-decoration: underline;
+}
+.item-practice__title {
+}
+
+.item-practice__text {
+	color: #737373;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 143%;
+	/*or 20px*/
+	letter-spacing: 0.2px;
+}
+.practice-item__imgage {
+	/*ОГО КАК СУКА ИНТЕРЕСНО И НЕПОНЯТНО, ВСЕ ИЗЗА _IBG!*/
+	display: block;
+	padding: 0 0 60% 0;
+	/*Делим высоту на длину и пишем сюда проценты!*/
+}
+
+/*	разные высоты карточек из-за разного наполнения текстом
+ 	.item-practice
+ 		display: flex;
+ 		height: 100%;
+		flex-direction: column;
+
+	.item-practice__content
+		flex: 1 1 auto;
+*/
+
+/*====================================WHO WE ARE*/
+
+.whoweare {
+	background-color: #fff;
+}
+.whoweare__container {
+	padding-top: 100px;
+	padding-bottom: 136px;
+}
+@media (max-width: 950px){
+	.whoweare__container {
+	padding-top: 45px;
+	padding-bottom: 50px;
+}
+}
+.whoweare__header {
+	margin: 0 0 100px 0;
+}
+@media (max-width: 950px){
+	.whoweare__header {
+	margin: 0 0 30px 0;
+	}
+}
+.whoweare__body {
+	display: flex;
+	/*При сужении вверх-влево стремимся*/
+	align-items: flex-start;
+}
+	/*БРОЮ КАК МЫ КРУТО ИГРАЕМ КОЛОНКАМИ АГА.
+	А ЕСЛИ БОЛЬШЕ ЧЕМ 2 итема?? ORDER??!*/
+@media (max-width: 950px){
+	.whoweare__body{
+		flex-direction: column;
+		/* или flex-direction: column-reverse;*/
+
+		/*Видео пропадает без этого. 
+		Оно прибито ж было flex-start'ом*/
+		align-items: stretch;
+	}
+	.whoweare__body:not(:last-child){
+		margin-top: 30px;
+	}
+}
+/* лепим видос под нужные цифры! */
+.whoweare__video {
+	flex: 0 0 57%;
+	position: relative;
+	padding: 0 0 42.26% 0;
+}
+@media (max-width: 950px){
+	/*меняем пропорции видоса, хихих
+	старые ж остались */
+	.whoweare__video{
+		padding: 0 0 56.25% 0;
+	}
+	.whoweare__video:not(last-child){
+		margin: 0px 0 30px 0;
+	}
+}
+/* лепим видос под нужные цифры! */
+.whoweare__video iframe{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+}
+.whoweare__content {
+	flex: 1 1 auto;
+	padding: 0px 0 0px 100px;
+}
+@media (max-width: 1080px){
+	.whoweare__content {
+		padding: 0px 0 0px 50px;
+	}
+}
+@media (max-width: 460px){
+	.whoweare__content {
+		padding: 0px;
+	}
+}
+.content-header{
+	margin: 20px 0;
+}
+@media (max-width: 1080px){
+	.content-header{
+		margin-top: 0px;
+	}
+}
+
+.content-header__title {
+	font-size: 40px;
+	line-height: 142.5%;
+	font-weight: 700;
+}
+@media (max-width: 992px){
+	.content-header__title {
+	font-size: 24px;
+	}
+}
+.content-header__title:not(:last-child){
+	padding: 0 0 10px 0;
+}
+.content-header__text {
+	font-size: 14px;
+	line-height: 142.8%;
+	font-weight: 500;
+	color: #737373;
+}
+.whoweare__items {
+}
+/*.whoweare__items:not(:last-child) {
+	padding: 30px 0;
+}*/
+.whoweare__item {
+}
+.item-whoweare {
+	display: flex;
+	padding: 30px 0 0;
+}
+.item-whoweare__icon {
+	flex: 0 0 32px;
+}
+.item-whoweare__body {
+	flex: 1 1 auto;
+	padding: 0 0 0 20px;
+}
+/*.item-whoweare__body>*:not(:last-child){
+	padding: 0 0 5px 0;
+}*/
+.item-whoweare__title {
+	color: #252B42;
+	font-size: 16;
+	line-height: 150%;
+	letter-spacing: 0.1px;
+	font-weight: bold;
+}
+.item-whoweare__title:not(:last-child){
+	padding: 0 0 5px 0;
+	}
+.item-whoweare__text {
+	color: #737373;
+	font-size: 16;
+	line-height: 150%;
+	letter-spacing: 0.2px;
+	font-weight: 600;
+	/*Прячем текст. Бестолково как-то. БЭК сработает норм*/
+	white-space: nowrap;
+	width: 225px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/*===============CLIENTS*/
+.clients{
+	padding: 50px 0;
+}
+@media (max-width: 767px){
+	.clients{
+	padding: 30px 0;
+	}
+}
+.clients__container {}
+.clients__items {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.clients__item {
+	padding: 8px 15px;
+	flex: 0 1 16.6667%;
+	text-align: center;
+	min-width: 140px;
+}
+.clients__item img{
+	max-width: 100%;
+}
+
+/*--------------------EMAIL subscribe*/
+
+/*						ЛЕПИМ ПОЛОУ ПСЕВДОЭЛТЫ */
+.subscribe {
+	position: relative;
+	padding-bottom: 20px;
+
+}
+.subscribe::before{
+	content: "";
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 77px;
+	left: 0;
+	background-color: #252B42;;
+}
+.subscribe__container {}
+
+.subscribe__body {
+	position: relative;
+	z-index: 2;
+/*	flex-wrap: wrap;*/
+	padding: 30px 40px 30px 50px;
+	background-color: #17213C;
+	border-radius: 2px;	
+}
+@media (min-width: 1070px){
+	.subscribe__body{
+		margin: 20px 32px 0px 32px;
+	}
+}
+@media (min-width: 810px){
+	.subscribe__body{
+	display: flex;
+	justify-content: space-between;
+	}
+}
+.subscribe__title {
+	font-weight: 700;
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: 0.1px;
+	text-align: left;
+	color: #fff;
+	
+}
+@media (max-width: 810px){
+	.subscribe__title{
+		margin: 0 0 20px 0;
+	}
+	.subscribe__body{
+		padding: 20px 25px;
+		/*Раздвигаем при уменьшении. Кайф же!*/
+		 margin: 0 -15px;
+	}
+}
+.subscribe__form {
+	flex: 0 1 50%;
+	justify-content: center;
+	display: flex;
+
+}
+.subscribe__input {
+	flex: 1 1 auto;
+	border: 0px solid #fff;
+	border-radius: 5px 0 0 5px;
+	padding: 15px 20px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 200%;
+	letter-spacing: 0.2px;
+	text-align: left;
+	border-right: 0;
+	
+}
+@media (min-width: 810px){
+	.subscribe__input{
+	max-width: 330px;
+	}
+	.subscribe__title{
+		max-width:270px ;
+	}
+}
+.subscribe__button {
+	background-color: #FF7B47;
+	color: #fff;
+	justify-content: safe center;
+	border-radius: 0px 5px 5px 0px;
+	padding: 15px 22px;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 200%;
+	letter-spacing: 0.2px;
+	text-align: center;
+	max-width: 117px;
+}
+.subscribe__button:hover{
+	transform: scale(1.04);
+}
+/*								GETINTOUCH*/
+
+
+.getintouch {
+	margin: 80px 0;
+}
+.getintouch__container {}
+
+.getintouch__header {}
+.getintouch__header:not(:last-child){
+	padding: 0 0 80px 0;
+}
+@media (max-width: 992px){
+	.getintouch__header:not(:last-child){
+	padding: 0 0 50px 0;
+}
+}
+@media (max-width: 767px){
+	.getintouch__header:not(:last-child){
+	padding: 0 0 30px 0;
+}
+}
+
+.getintouch__body {
+	align-items: center;
+	justify-content: center;
+}
+
+@media (min-width: 992px){
+	.getintouch__body {
+	display: flex;
+	margin: 0 -15px;
+	}
+
+}
+.getintouch__column {
+	flex: 1 1 33.33%;
+	text-align: center;
+	margin: -15px;
+}
+@media (min-width: 992px){
+	.getintouch__column{
+		display: flex;
+		margin: 0px;
+	
+	}
+}
+.getintouch__item{
+	/*max-width: 330px;*/
+	width: 100%;
+}
+/*.getintouch__item:hover {
+	background-color:#FAD7A0 ;
+
+}*/
+
+.item-getintouch {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFF;
+	padding: 50px 40px 60px;
+}
+
+.item-getintouch_active{
+	padding: 80px 15px;
+	background-color:#252B42 ;
+/*	color: white;*/
+}
+@media (max-width: 992px){
+	.item-getintouch{
+		padding: 50px 15px;
+}
+}
+.item-getintouch_active .item-getintouch__adress{
+	color: white;
+}
+.item-getintouch_active .item-getintouch__title{
+	color: white;
+}
+.item-getintouch_active .item-getintouch__button{
+	color: white;
+	border: 2px solid white;
+	transition: all 0.3s ease 0s;
+}
+.item-getintouch>*:not(:last-child){
+	margin: 0 0 15px 0;
+}
+.item-getintouch__icon{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.item-getintouch__icon img {
+	height: 72px;
+}
+.item-getintouch__adress{
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 171%;
+	letter-spacing: 0.2px;
+}
+.item-getintouch__adress a {
+	text-decoration: none;
+	color: #252B42;
+}
+.item-getintouch__title {
+	text-decoration: none;
+	color: #252B42;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 150%;
+	/* identical to box height, or 24px */
+	letter-spacing: 0.1px;
+}
+.item-getintouch__button {
+	/*min-height: 44px;*/
+	/*display: flex;*/
+	/*justify-content: center;*/
+	/*align-items: center;*/
+	border: 1px solid #FF7B47;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	border-radius: 5px;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 171%;
+					/*уменьшаем скорость анимации */
+	transition: all 0.3s ease 0s;
+	color: #FF7B47;
+}
+.item-getintouch__button:hover{
+	background-color: #FF7B47;
+	color: #fff;
+}
+/*							CONTACT*/
+
+.contact {
+	padding: 40px 0;
+	background-color: #fff;
+
+}
+
+.cpntact__container {
+}
+.content__body{
+	/*margin: 0 15px;
+	display: flex;
+	justify-content: space-between;	*/
+}
+@media (min-width: 767px){
+	.content__body{
+	margin: 0 15px;
+	display: flex;
+	justify-content: space-between;	
+	}
+}
+.contact__content {}
+.content__title {
+	font-size: 24px;
+	font-weight: 700;
+	line-height: 133%;
+	letter-spacing: 0.1px;
+	color: #252B42;
+}
+.content__title:not(:last-child){
+	margin-bottom: 10px;
+}
+.content__text {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 143%;
+	letter-spacing: 0.2px;
+	text-align: left;
+	color: #737373;
+}
+.contact__button {
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 200%
+	letter-spacing: 0.2px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 5px;
+	color: #fff;
+	padding: 15px 40px;
+	background-color: #FF7B47;
+	transition: all 0.3s ease 0s;
+}
+@media (max-width: 767px){
+	.contact__button{
+		margin-top: 10px;
+	}	
+}
+.contact__button:hover{
+	color: #FF7B47;
+	background-color: #fff;
+	padding: 14px 39px;
+	border: 1px solid #FF7B47;
+
+}
+/*								Footer*/
+.footer {}
+.footer__top {
+	background-color: #17213C;
+	padding: 30px 0;
+}
+.footer__main {
+}
+.footer__row{
+	display: flex;
+	flex-wrap: wrap;
+	padding: 0px -15px;
+}
+.footer_column {
+	flex: 0 1 16.667%;
+	padding: 20px 15px;	
+}
+.footer_column:last-child {
+	flex: 0 1 33.334%;
+}
+@media (max-width: 1023px){
+	.footer_column {
+		flex: 0 1 25%;
+	}
+	.footer_column:last-child {
+		flex: 1 1 100%;
+	}
+}
+@media (max-width: 767px){
+	.footer_column {
+		flex: 0 1 50%;
+		padding: 15px 7px;
+	}
+}
+
+.footer__label {
+	color: #fff;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 150%;
+/* identical to box height, or 24px */
+	letter-spacing: 0.1px;
+	padding-bottom: 20px;
+}
+
+.footer__menu {}
+
+.menu-footer {
+}
+.menu-footer__list {
+
+}
+.menu-footer__item {
+
+}
+
+.menu-footer__item:not(:last-child){
+	padding-bottom: 10px;
+}
+.menu-footer__link {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 171%;
+	/* identical to box height, or 24px */
+	letter-spacing: 0.2px;
+	color: #FFFFFF;
+}
+.menu-footer__link:hover{
+	text-decoration: underline;
+}
+.footer__contacts {}
+.contacts-footer {
+	display: flex;
+	flex-direction: column;
+}
+.contacts-footer__item {
+	padding: 0 0 0 34px;
+	line-height: 142%;
+	display: flex;
+	color: #fff;
+	align-items: center;
+	min-height: 30px;
+}
+.contacts-footer__item:hover{
+	text-decoration: underline;
+}
+.contacts-footer__item:not(:last-child){
+	margin: 0 0 10px 0;
+}
+.contacts-footer__item-phone {
+	background: url("../img/footer/fPhone.svg")left no-repeat;
+}
+.contacts-footer__item-map {
+	background: url("../img/footer/fGPS.svg")left no-repeat;
+}
+.contacts-footer__item-telegram {
+	background: url("../img/footer/fTelegram.svg")left no-repeat;
+}
+/*												Footer bottom*/
+.footer__bottom {
+	padding: 25px 0;
+}
+.footer__container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+@media (max-width: 767px){
+	.footer__container{
+		flex-direction: column;
+		text-align: center;
+	}
+	.footer__copy:not(:last-child){
+		margin: 0 0 10px 0;
+	}
+}
+.footer__copy {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 171%;
+	/* identical to box height, or 24px */
+	letter-spacing: 0.2px;
+	color: #737373;
+}
+.footer__sotial {}
+.sotial-footer {
+	margin: 0 40px;
+	align-items: center;
+	display: flex;
+
+}
+.sotial-footer__item {
+}
+.sotial-footer__item:hover{
+	opacity: 0.9;
+	transform: scale(1.1);
+	/*background-color: #8EC2F2;*/
+}
+.sotial-footer__item:not(:last-child) {
+	margin: 0 20px 0 0;
+}
